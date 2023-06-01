@@ -69,22 +69,6 @@ WooCommerce Checkout
     padding: 0;
     margin: 0;
   }
-
-  // Place ordere button
-  #place_order {
-    @extend .btn-lg;
-    width: 100%;
-    margin-bottom: 0;
-  }
-}
-
-
-// Adjust terms checkboxes
-.woocommerce form .form-row .input-checkbox {
-  margin-top: ($line-height-base - $form-check-input-width) * .5 !important;
-  margin-right: $form-check-input-width * .5 !important;
-  margin-bottom: 0 !important;
-  margin-left: -$spacer * 1.5 !important;
 }
 
 
@@ -97,6 +81,7 @@ WooCommerce Checkout
   margin-bottom: $spacer;
   padding: $spacer;
 }
+
 
 // Payment saved cards radios
 .woocommerce-SavedPaymentMethods.wc-saved-payment-methods {
@@ -121,19 +106,17 @@ WooCommerce Checkout
   }
 }
 
-// Stripe
+
 // Stripe credit card input
 .wc-stripe-elements-field,
 .wc-stripe-iban-element-field {
-  @extend .form-control;
-  margin-top: 0 !important;
-  margin-right: 0 !important;
-  margin-bottom: $spacer !important;
-  margin-left: 0 !important;
   padding-top: $input-padding-y !important;
   padding-right: $input-padding-x !important;
   padding-bottom: $input-padding-y !important;
   padding-left: $input-padding-x !important;
+  background-color: $input-bg !important;
+  border-color: $input-border-color !important;
+  border-radius: $border-radius;
 }
 
 
@@ -150,5 +133,21 @@ WooCommerce Checkout
     @extend .form-check-label;
     cursor: pointer;
   }
+}
 
+
+// Adjust terms checkboxes
+.woocommerce form .form-row .input-checkbox {
+  margin-top: ($line-height-base - $form-check-input-width) * .5 !important;
+  margin-right: $form-check-input-width * .5 !important;
+  margin-bottom: 0 !important;
+  margin-left: -$spacer * 1.5 !important;
+}
+
+
+// Place ordere button
+#place_order {
+  @extend .btn-lg;
+  width: 100%;
+  margin-bottom: 0;
 }
